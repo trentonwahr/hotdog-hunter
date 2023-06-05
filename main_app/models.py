@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 class Hotdog(models.Model):
   restaurant = models.CharField(max_length=100)
@@ -8,4 +9,8 @@ class Hotdog(models.Model):
   
   def __str__(self):
     return self.restaurant
+  
+  def get_absolute_url(self):
+    return reverse("hotdog-detail", kwargs={"hotdog_id": self.id})
+  
   
