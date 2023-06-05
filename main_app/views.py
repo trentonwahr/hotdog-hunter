@@ -23,7 +23,6 @@ class HotdogDetail(DetailView):
 class HotdogCreate(CreateView):
   model = Hotdog
   fields = ['restaurant', 'location', 'rating', 'description']
-  success_url = '/hotdogs/'
 
 class HotdogUpdate(UpdateView):
   model = Hotdog

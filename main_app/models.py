@@ -11,6 +11,6 @@ class Hotdog(models.Model):
     return self.restaurant
   
   def get_absolute_url(self):
-    return reverse("hotdog-detail", kwargs={"hotdog_id": self.id})
+    return reverse("hotdog-detail", kwargs={"pk": self.id})
   
   
