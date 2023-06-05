@@ -17,7 +17,9 @@
 
 <section class="card-container">
   {% for hotdog in hotdog_list %}
-    <h1>{{hotdog.restaurant}}</h1>
+    <a href="{% url 'hotdog-detail' hotdog.id %}">
+      <h1>{{hotdog.restaurant}}</h1>
+    </a>
   {% endfor %}
 </section>
 

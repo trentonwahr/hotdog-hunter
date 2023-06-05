@@ -16,3 +16,6 @@ def about(request):
 
 class HotdogList(ListView):
   model = Hotdog
+
+class HotdogDetail(DetailView):
+  model = Hotdog
