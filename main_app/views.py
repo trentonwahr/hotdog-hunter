@@ -14,13 +14,13 @@ class Home(LoginView):
 def about(request):
   return render(request, 'about.html')
 
-class HotdogList(ListView):
+class HotdogList(LoginRequiredMixin, ListView):
   model = Hotdog
 
-class HotdogDetail(DetailView):
+class HotdogDetail(LoginRequiredMixin, DetailView):
   model = Hotdog
 
-class HotdogCreate(CreateView):
+class HotdogCreate(LoginRequiredMixin, CreateView):
   model = Hotdog
   fields = ['restaurant', 'location', 'rating', 'description']
 
@@ -28,11 +28,11 @@ class HotdogCreate(CreateView):
     form.instance.user = self.request.user
     return super().form_valid(form)
 
-class HotdogUpdate(UpdateView):
+class HotdogUpdate(LoginRequiredMixin, UpdateView):
   model = Hotdog
   fields = ['location', 'rating', 'description']
 
-class HotdogDelete(DeleteView):
+class HotdogDelete(LoginRequiredMixin, DeleteView):
   model = Hotdog
   success_url = '/hotdogs/'
 
