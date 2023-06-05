@@ -19,3 +19,7 @@ class HotdogList(ListView):
 
 class HotdogDetail(DetailView):
   model = Hotdog
+
+class HotdogCreate(CreateView):
+  model = Hotdog
+  fields = ['restaurant', 'location', 'rating', 'description']
