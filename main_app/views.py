@@ -24,3 +24,11 @@ class HotdogCreate(CreateView):
   model = Hotdog
   fields = ['restaurant', 'location', 'rating', 'description']
   success_url = '/hotdogs/'
+
+class HotdogUpdate(UpdateView):
+  model = Hotdog
+  fields = ['location', 'rating', 'description']
+
+class HotdogDelete(DeleteView):
+  model = Hotdog
+  success_url = '/hotdogs/'

@@ -17,6 +17,10 @@
     <h2>{{ hotdog.location }}</h2>
     <h2>{{ hotdog.rating }}</h2>
     <p>{{ hotdog.description }}</p>
+    <div class="hotdog-actions">
+      <a href="{% url 'hotdog-update' hotdog.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'hotdog-delete' hotdog.id %}" class="btn danger">Delete</a>
+    </div>
   </div>
 </section>
 
