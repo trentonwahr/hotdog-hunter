@@ -24,16 +24,6 @@
   margin-top: 20px;
 }
 
-.subsection-title {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.subsection-content {
-  margin: 0 8px;
-}
-
 .hotdog-details h1 {
   font-size: var(--font-xxl);
   margin: 15px 0 3px;
@@ -54,27 +44,6 @@
 .hotdog-details p {
   font-size: var(--font-reg);
   margin: 5px 0;
-}
-
-.subsection-title img {
-  height: 42px;
-  margin-left: 8px;
-}
-
-.subsection-title img:first-of-type {
-  margin-left: 16px;
-}
-
-.subsection-content p,
-.subsection-content input,
-.subsection-content select {
-  font-size: var(--font-l);
-}
-
-.subsection-content input,
-.subsection-content select {
-  margin-left: 5px;
-  padding: 3px;
 }
 
 #file-input {

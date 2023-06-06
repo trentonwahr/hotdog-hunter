@@ -17,9 +17,13 @@
 
 <section class="card-container">
   {% for hotdog in hotdog_list %}
+  <div class="card">
     <a href="{% url 'hotdog-detail' hotdog.id %}">
-      <h1>{{hotdog.restaurant}}</h1>
+      <div class="card-content">
+        <h1 class="card-title">{{hotdog.restaurant}}</h1>
+      </div>
     </a>
+  </div>
   {% endfor %}
 </section>
 
