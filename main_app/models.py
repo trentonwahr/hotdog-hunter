@@ -15,4 +15,9 @@ class Hotdog(models.Model):
   def get_absolute_url(self):
     return reverse("hotdog-detail", kwargs={"pk": self.id})
   
-  
+class Photo(models.Model):
+  url = models.CharField(max_length=250)
+  hotdog = models.OneToOneField(Hotdog, on_delete=models.CASCADE)
+
+  def __str__(self):
+    return f"Photo for hotdog_id: {self.hotdog_id} @{self.url}"

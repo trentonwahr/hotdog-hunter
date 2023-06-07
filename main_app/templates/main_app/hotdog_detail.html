@@ -7,6 +7,7 @@
   type="text/css" 
   href="{% static 'css/hotdogs/hotdog-detail.css' %}"
 />
+<script defer src="{% static 'js/hotdog-detail.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -17,11 +18,34 @@
     <h2>{{ hotdog.location }}</h2>
     <h2>{{ hotdog.rating }}</h2>
     <p>{{ hotdog.description }}</p>
+    <div class="hotdog-img">
+      {% if hotdog.photo.url %}
+      <img 
+        src="{{hotdog.photo.url}}" 
+        alt="A photo of {{hotdog.restaurant}}"
+        class="usr-img"
+      >
+      {% endif %}
+    </div>
     {% if user == hotdog.user %}
       <div class="hotdog-actions">
         <a href="{% url 'hotdog-update' hotdog.id %}" class="btn warn">Edit</a>
         <a href="{% url 'hotdog-delete' hotdog.id %}" class="btn danger">Delete</a>
       </div>
+      <h3>Change photo</h3>
+      <p id="file-name"></p>
+      <form 
+        action="{% url 'add-photo' hotdog.id %}"
+        enctype="multipart/form-data"
+        method="POST"
+      >
+        {% csrf_token %}
+        <label class="btn secondary">
+          Choose photo
+          <input type="file" name="photo-file" id="file-input">
+        </label>
+        <button type="submit" class="btn submit">Upload Photo</button>
+      </form>
     {% endif %}
   </div>
 </section>
