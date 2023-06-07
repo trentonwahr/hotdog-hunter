@@ -10,6 +10,11 @@
   margin: 10px;
   border: var(--borders);
   box-shadow: var(--card-box-shadow);
+  display: flex;
+}
+
+.card-title {
+  display: flex;
 }
 
 .card-content {
@@ -35,4 +40,8 @@
 .card p {
   margin: 5px 0;
   font-size: var(--font-reg);
+}
+
+.card-img-container img{
+  width: 100%;
 }

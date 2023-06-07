@@ -15,8 +15,8 @@
 <section class="hotdog-container">
   <div class="hotdog-details">
     <h1>{{ hotdog.restaurant }}</h1>
-    <h2>{{ hotdog.location }}</h2>
-    <h2>{{ hotdog.rating }}</h2>
+    <h3>{{ hotdog.location }}</h3>
+    <h2>{{ hotdog.rating }} out of 5 stars</h2>
     <p>{{ hotdog.description }}</p>
     <div class="hotdog-img">
       {% if hotdog.photo.url %}
@@ -24,6 +24,11 @@
         src="{{hotdog.photo.url}}" 
         alt="A photo of {{hotdog.restaurant}}"
         class="usr-img"
+      >
+      {% else %}
+      <img 
+        src="{% static 'images/default-dog.svg' %}" 
+        alt="A smiling hotdog"
       >
       {% endif %}
     </div>
