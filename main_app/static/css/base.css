@@ -26,10 +26,10 @@ body {
   min-height: 100vh;
   --nav-bg: #fff;
   --nav-bg-ff: #fff;
-  --borders: #b81f37 solid 6px;
+  --borders: #b81f37 solid 2px;
   --text-color: #b81f37;
   --link-hover-color: #710717;
-  --button-bg: rgb(245, 245, 245);
+  --button-bg: rgb(246, 245, 245);
   --button-bg-hover: rgb(226, 226, 226);
   --submit: rgb(26, 128, 0);
   --warn: rgb(255, 102, 0);
@@ -51,7 +51,7 @@ body {
 header {
   width: 100%;
   background: var(--nav-bg-ff);
-  border-bottom: var(--borders);
+  border-bottom: #b81f37 solid 6px;
 }
 
 nav {
@@ -104,7 +104,7 @@ nav li {
   padding: 5px 8px;
 }
 
-.header-logo-container {
+.header-container {
   text-decoration: none;
   margin: auto;
   padding: 10px 20px 0;
@@ -188,12 +188,12 @@ nav li {
   }
 
   nav,
-  .header-logo-container {
+  .header-container {
     margin: 10px 0;
     padding: 0 15px;
   }
   
-  .header-logo-container {
+  .header-container {
     padding-top: 3px;
   }
 
@@ -207,7 +207,7 @@ nav li {
     flex-wrap: nowrap;
   }
 
-  .header-logo-container {
+  .header-container {
     width: 300px;
   }
 
@@ -248,7 +248,7 @@ nav li {
     margin-left: auto;
   }
 
-  .header-logo-container {
+  .header-container {
     display: flex;
     align-items: center;
     width: 500px;
@@ -262,7 +262,7 @@ nav li {
     }
 
     nav,
-    .header-logo-container {
+    .header-container {
       background: var(--nav-bg);
       -webkit-backdrop-filter: blur(3px);
       backdrop-filter: blur(3px);
