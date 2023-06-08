@@ -1,6 +1,6 @@
 # Hotdog Hunter
 
-![App Screenshot](https://github.com/trentonwahr/album-tracker/blob/main/public/images/app-screenshot.png)
+![App Screenshot](https://github.com/trentonwahr/hotdog-hunter/blob/main/public/images/app-screenshot.png)
 
 Hotdog hunter is a passion project fron a guy who loves eating dogs.
 
