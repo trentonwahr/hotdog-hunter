@@ -4,6 +4,8 @@
 
 Hotdog Hunter is the premier app for all of the hotdog enthusiasts out there! Here you can log your favorite hotdog spots and find recommendations from other hotdog lover!
 
+## [Get started here!](https://hotdog-hunter.fly.dev/)
+
 ## Technologies Used
 
 * Django
