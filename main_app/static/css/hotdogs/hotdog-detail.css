@@ -17,7 +17,7 @@
 }
 
 .hotdog-details {
-  width: 98%;
+  width: 100%;
 }
 
 .hotdog-actions {
@@ -59,15 +59,15 @@
 
 @media only screen and (min-width: 768px) {
   .hotdog-container {
-    padding: 35px 30px;
+    padding: 35px 150px;
     flex-direction: row;
     align-items: center;
     justify-content: start;
   }
 
   .hotdog-img {
-    width: 25%;
-    max-width: 250px;
+    width: 75%;
+    max-width: 550px;
     margin-right: 25px;
   }
 }
