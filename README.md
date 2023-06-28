@@ -13,7 +13,7 @@ Hotdog Hunter is the premier app for all of the hotdog enthusiasts out there! He
 * Boto3
 * AWS S3
 * Docker
-* Bit.io
+* Supabase
 * Pyscopg2
 * Gunicorn
 * Whitenoise
